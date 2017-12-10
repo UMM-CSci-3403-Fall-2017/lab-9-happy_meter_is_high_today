@@ -20,7 +20,7 @@ public class Main {
 		DatagramPacket upPacket = new DatagramPacket(upBuffer, upBuffer.length, ipAddress, portNumber);
 		socket.send(upPacket);
 
-		PacketReceiver pack_receiver = new PacketReceiver();
+		ReceiverPackagers pack_receiver = new ReceiverPackagers();
 
 		pack_receiver.startReceivingPackets(socket);
 	}
