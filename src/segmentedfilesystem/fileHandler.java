@@ -23,7 +23,7 @@ public class fileHandler{
     for(int i=0;i<arrayofBytes.length; i++){
       arrayofBytes[i] = file.get(i);
     }
-    Arrays.sort(arrayofBytes, new toSortFile());
+    Arrays.sort(arrayofBytes, new sortFile());
 
     FileOutputStream Package = new FileOutputStream("./" + packet);
 
@@ -35,7 +35,7 @@ public class fileHandler{
     Package.close();
   }
 
-  public static class toSortFile implements Comparator<byte[]>{
+  public static class sortFile implements Comparator<byte[]>{
     @Override
     public int compare (byte[] p1, byte[] p2){
       int package1 = parsePackaet(p1);
